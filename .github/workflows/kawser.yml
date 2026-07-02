@@ -16,6 +16,6 @@ jobs:
       runs-on: ubuntu-latest
       steps:
          - name: Git clone
-            uses: actions/checkout@v3
+           uses: actions/checkout@v2
          - name: Read the file
-            run: cat ./kawser.txt
+           run: cat kawser.txt
