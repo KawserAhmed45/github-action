@@ -1,0 +1,21 @@
+name: Kawser CI CD Pipeline
+
+
+on:
+   push:
+      branches:
+          - main
+          - dev 
+   pull_request:
+      branches:
+          - main
+
+
+jobs:
+   read_the_file:
+      runs-on: ubuntu-latest
+      steps:
+         - name: Git clone
+            uses: actions/checkout@v3
+         - name: Read the file
+            run: cat ./kawser.txt
